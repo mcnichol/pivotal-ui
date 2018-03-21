@@ -27,8 +27,9 @@ export class PortalSource extends React.PureComponent {
 
   render() {
     const root = portalDestinations[this.props.name];
+    console.log(this.props.children, typeof this.props.children, root);
     if (!root) return null;
-    return ReactDOM.createPortal(this.props.children, root);
+    return ReactDOM.createPortal([this.props.children], root);
   }
 }
 
@@ -52,6 +53,6 @@ export class PortalDestination extends React.PureComponent {
   }
 
   render() {
-    return <div ref={el => this.el = el} />;
+    return <div className="foo" ref={el => this.el = el} />;
   }
 }
