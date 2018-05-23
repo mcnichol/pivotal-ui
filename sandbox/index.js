@@ -6,7 +6,7 @@ import 'pivotal-ui/css/typography/typography.scss';
 
 const root = document.getElementById('root');
 
-ReactDOM.render(<Sandbox/>, root);
+ReactDOM.hydrate(<Sandbox/>, root);
 
 if (module.hot) {
   module.hot.accept('./sandbox', () => {

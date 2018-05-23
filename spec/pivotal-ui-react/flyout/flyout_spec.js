@@ -1,24 +1,57 @@
 import '../spec_helper';
 import {Flyout} from '../../../src/react/flyout';
+import {Icon} from '../../../src/react/iconography';
+import {Dialog} from '../../../src/react/dialogs';
 
-describe('Flyout', () => {
-  let close, children, header, subject;
+fdescribe('Flyout', () => {
+  let onHide, children, header, subject;
 
   beforeEach(() => {
-    close = jasmine.createSpy('close');
+    spyOnRender(Dialog).and.callThrough();
+    spyOnRender(Icon);
+
+    onHide = jasmine.createSpy('onHide');
     children = (<div>some-flyout-body</div>);
     header = (<div>some-flyout-header</div>);
     subject = ReactDOM.render((
-      <Flyout {...{close, children, header}}/>
+      <Flyout {...{
+        animationDuration: 0,
+        animationEasing: 'linear',
+        children,
+        className: 'some-backdrop-class',
+        dialogClassName: 'some-dialog-class',
+        header,
+        iconSrc: 'chevron_left',
+        onHide,
+        show: true
+      }}/>
     ), root);
   });
 
-  it('renders the flyout', () => {
-    expect('.flyout').toExist();
+  it('renders a Dialog', () => {
+    expect(Dialog).toHaveBeenRenderedWithProps({
+      show: true,
+      onHide,
+      animationDuration: 0,
+      animationEasing: 'linear',
+      className: 'some-backdrop-class',
+      dialogClassName: 'some-dialog-class pui-flyout-dialog',
+      children: jasmine.any(Object),
+      hideOnBackdropClick: false,
+      hideOnEscKeyDown: false
+    });
   });
 
-  it('renders the flyout without the flyout-open class', () => {
-    expect('.flyout').not.toHaveClass('flyout-open');
+  it('renders an icon button', () => {
+    expect('.pui-dialog .pui-flyout-icon-btn').toHaveClass('pui-btn-default-flat');
+    expect('.pui-dialog .pui-flyout-icon-btn').toHaveClass('pui-btn-icon');
+    expect(Icon).toHaveBeenRenderedWithProps({src: 'chevron_left', size: 'inherit', style: {}, verticalAlign: 'middle'});
+  });
+
+  it('renders the children', () => {
+    expect('.pui-dialog pui-flyout-header').toExist();
+    expect('.pui-dialog pui-flyout-header').toExist();
+    expect('.pui-dialog .pui-modal-body a').toExist();
   });
 
   describe('bodyClassName', () => {
@@ -129,3 +162,29 @@ describe('Flyout', () => {
     });
   });
 });
+
+
+/*
+  describe('when the backdrop is clicked', () => {
+    beforeEach(() => {
+      onHide.calls.reset();
+      $('.pui-dialog-backdrop').simulate('click');
+    });
+
+    it('calls the onHide prop', () => {
+      expect(onHide).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('when esc is pressed', () => {
+    beforeEach(() => {
+      onHide.calls.reset();
+      const escEvent = new KeyboardEvent('keydown', {keyCode: Dialog.ESC_KEY, bubbles: true});
+      document.documentElement.dispatchEvent(escEvent);
+    });
+
+    it('calls the onHide prop', () => {
+      expect(onHide).not.toHaveBeenCalled();
+    });
+  });
+ */
