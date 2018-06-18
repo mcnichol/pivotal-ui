@@ -1,7 +1,7 @@
 import React from 'react';
 import {Icon} from '../iconography';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 
 export class Input extends React.Component {
   static propTypes = {

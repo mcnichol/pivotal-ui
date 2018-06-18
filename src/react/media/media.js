@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import classnames from 'classnames';
 
 const shortSizes = {xsmall: 'xs', small: 'sm', medium: 'md', large: 'lg'};
@@ -49,6 +49,14 @@ export class Media extends React.Component {
 }
 
 export class Flag extends React.Component {
+  static propTypes = {
+    ...Media.propTypes
+  };
+
+  static defaultProps = {
+    ...Media.defaultProps
+  };
+
   componentDidMount() {
     require('../../css/media');
   }

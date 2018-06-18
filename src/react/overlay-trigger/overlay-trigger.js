@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import Scrim from '../mixins/mixins/scrim_mixin';
 import TetherComponent from '../react-tether/TetherComponent';
 import uniqueid from 'lodash.uniqueid';

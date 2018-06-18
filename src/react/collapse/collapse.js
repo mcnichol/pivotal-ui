@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {Collapsible} from '../collapsible';
 import {mergeProps} from '../helpers';
 import {Icon} from '../iconography';

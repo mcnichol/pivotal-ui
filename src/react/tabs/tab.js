@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 
 export class Tab extends React.PureComponent {
   static propTypes = {

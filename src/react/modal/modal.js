@@ -1,5 +1,5 @@
 import React, {PureComponent} from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import classnames from 'classnames';
 import uniqueId from 'lodash.uniqueid';
 import {Icon} from '../iconography';

@@ -1,7 +1,7 @@
 import React from 'react';
 import DomHelpers from '../helpers/dom-helpers';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 
 export class Dialog extends React.PureComponent {
   static propTypes = {

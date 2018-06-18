@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import move from './move_helper';
 import {Icon} from '../iconography';
 import {mergeProps} from '../helpers';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 
 const childrenIndices = children => children.map((child, i) => i);
 

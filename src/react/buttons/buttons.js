@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {mergeProps} from '../helpers';
 
 export class UIButton extends React.Component {
@@ -91,6 +91,10 @@ export class UIButton extends React.Component {
 }
 const defButton = propOverrides => {
   return class extends React.Component {
+    static propTypes = {
+      ...UIButton.propTypes
+    };
+
     render() {
       return <UIButton {...this.props} {...propOverrides}/>;
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 
 export class ProgressBar extends React.Component {
   static propTypes = {

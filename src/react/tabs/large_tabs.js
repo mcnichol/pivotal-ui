@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import Animation from '../mixins/mixins/animation_mixin';
 import TabContent from './tab_content';
 import TabHeaders from './tab_headers';

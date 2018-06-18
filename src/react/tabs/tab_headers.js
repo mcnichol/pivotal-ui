@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React from 'react';
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 
 export default class TabHeaders extends React.Component {
   static propTypes = {

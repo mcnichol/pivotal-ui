@@ -1,6 +1,6 @@
 import {EventEmitter} from 'events';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import ReactDOM from 'react-dom';
 
 let destinationPortals = {};

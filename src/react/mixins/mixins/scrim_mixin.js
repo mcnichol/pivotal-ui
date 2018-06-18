@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 
 function rootClick(e) {
   const node = ReactDOM.findDOMNode(this);

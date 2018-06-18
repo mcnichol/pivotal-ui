@@ -1,11 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import uniqueid from 'lodash.uniqueid';
 import classnames from 'classnames';
 import {mergeProps} from '../helpers';
 
 export class Toggle extends React.PureComponent {
   static propTypes = {
+    className: PropTypes.string,
     id: PropTypes.string,
     size: PropTypes.oneOf(['small', 'medium', 'large']),
     type: PropTypes.oneOf(['checkbox'])

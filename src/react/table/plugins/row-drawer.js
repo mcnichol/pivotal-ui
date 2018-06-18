@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {Collapsible} from '../../collapsible';
 import {Icon} from '../../iconography';
 import classnames from 'classnames';

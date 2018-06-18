@@ -2,7 +2,7 @@ import React from 'react';
 import Animation from '../mixins/mixins/animation_mixin';
 import {default as mixin} from '../mixins';
 import {mergeProps} from '../helpers';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {useBoundingClientRect} from '../mixins/components/bounding_client_rect';
 
 const privates = new WeakMap();

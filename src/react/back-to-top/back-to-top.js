@@ -1,6 +1,6 @@
 import {Icon} from '../iconography';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import throttle from 'lodash.throttle';
 import ScrollTop from './scroll-top';
 import {mergeProps} from '../helpers';

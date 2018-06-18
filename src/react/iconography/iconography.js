@@ -1,5 +1,5 @@
 import {mergeProps} from '../helpers';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import React from 'react';
 import classnames from 'classnames';
 import Icons from './icons';

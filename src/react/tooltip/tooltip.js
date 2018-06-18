@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import classnames from 'classnames';
 
 export class Tooltip extends React.PureComponent {

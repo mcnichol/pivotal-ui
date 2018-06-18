@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {DefaultButton} from '../buttons';
 import {Icon} from '../iconography';
 import classnames from 'classnames';

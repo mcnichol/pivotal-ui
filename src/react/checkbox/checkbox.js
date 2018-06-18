@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import {Icon} from '../iconography';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import uniqueId from 'lodash.uniqueid';
 
 export class Checkbox extends React.Component {

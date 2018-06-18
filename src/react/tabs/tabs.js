@@ -2,7 +2,7 @@ import React from 'react';
 import Animation from '../mixins/mixins/animation_mixin';
 import {LargeTabs} from './large_tabs';
 import {default as mixin} from '../mixins';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {matches} from './media-size';
 import {SmallTabs} from './small_tabs';
 import uniqueid from 'lodash.uniqueid';
@@ -151,18 +151,20 @@ export class Tabs extends mixin(React.Component).with(Animation) {
       ...props
     } = this.props;
     const {activeKey, previousActiveKey} = this.state;
-    
+
     return <LargeTabs {...{...props, childArray, activeKey, previousActiveKey, id, handleClick: this.handleClick, transitionProgress}}/>;
   }
 }
 
 export class LeftTabs extends React.PureComponent {
   static propTypes = {
+    ...Tabs.propTypes,
     position: PropTypes.oneOf(['top', 'left']),
     tabWidth: PropTypes.number,
   };
 
   static defaultProps = {
+    ...Tabs.defaultProps,
     position: 'left',
     tabWidth: 3,
     tabType: 'left'

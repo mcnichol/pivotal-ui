@@ -13,6 +13,14 @@ const properties = ['width', 'height', 'top', 'right', 'bottom', 'left'];
 
 export const useBoundingClientRect = Klass => {
   return class BoundingClientRect extends mixin(Component).with(Mounted) {
+    static propTypes = {
+      ...Klass.propTypes
+    };
+
+    static defaultProps = {
+      ...Klass.defaultProps
+    };
+
     constructor(props, context) {
       super(props, context);
       let resolver;

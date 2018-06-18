@@ -9,7 +9,7 @@ import scrollIntoView from 'scroll-into-view';
 import Scrim from '../mixins/mixins/scrim_mixin';
 import through from 'through';
 import TrieSearch from 'trie-search';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 
 const trieFromSearchableItems = (searchableItems, trieOptions) => {
   return new Promise(resolve => {

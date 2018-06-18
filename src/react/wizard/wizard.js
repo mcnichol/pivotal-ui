@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
-import types from 'prop-types';
+import types from 'prop-types-annotated';
 import {PrimaryButton} from '../buttons';
 import {Icon} from '../iconography';
 import classnames from 'classnames';

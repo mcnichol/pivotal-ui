@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {mergeProps} from '../helpers';
 
 export class Divider extends React.PureComponent {

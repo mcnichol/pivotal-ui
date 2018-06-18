@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import classnames from 'classnames';
 import deepEqual from 'deep-equal';
 import {FormRow} from './form-row';

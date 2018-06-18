@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {Autocomplete, AutocompleteInput} from '../../../src/react/autocomplete';
 
 const simulateKeyDown = (selector, keyCode) => {

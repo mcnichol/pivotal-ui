@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {mergeProps} from '../helpers';
 import {Icon} from '../iconography';
 
@@ -81,8 +81,13 @@ class Alert extends React.PureComponent {
 const defAlert = props => {
   return class extends React.Component {
     static propTypes = {
+      ...Alert.propTypes,
       dismissable: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
       withIcon: PropTypes.bool
+    };
+
+    static defaultProps = {
+      ...Alert.defaultProps
     };
 
     componentDidMount() {

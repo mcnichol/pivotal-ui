@@ -1,5 +1,5 @@
 import '../../spec_helper';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {Table, withRenderTdChildren} from '../../../../src/react/table';
 
 describe('withRenderTdChildren', () => {

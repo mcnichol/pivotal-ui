@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types-annotated';
 import {Collapsible} from '../collapsible';
 
 export class ExpanderTrigger extends React.PureComponent {
@@ -26,7 +26,12 @@ export class ExpanderTrigger extends React.PureComponent {
 
 export class ExpanderContent extends React.PureComponent {
   static propTypes = {
+    ...Collapsible.propTypes,
     expanded: PropTypes.bool
+  };
+
+  static defaultProps = {
+    ...Collapsible.defaultProps
   };
 
   constructor(props, context) {
